@@ -1,0 +1,17 @@
+<!-- courses/templates/course_subjects_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ course.name }} Subjects</title>
+</head>
+<body>
+    <h1>{{ course.name }} Subjects</h1>
+    <ul>
+        {% for subject in subjects %}
+            <li>{{ subject.name }}</li>
+        {% empty %}
+            <li>No subjects found for this course.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

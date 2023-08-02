@@ -1,0 +1,27 @@
+{% load static %}
+{% load custom_filters %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{% static 'style/navLayout.css'%}" rel="stylesheet">   
+        <script src="{% static 'JS/code.js' %}"></script>  
+        <script src="https://kit.fontawesome.com/6c7f4cf4b0.js" crossorigin="anonymous"></script>
+        <title>Ashley Academy</title>
+    </head>
+    <body class="body">
+        <div class="navBar">
+            
+            <div>
+                <img class="logo" src="{% static 'image/logo.png' %}" alt="Logo">
+                <a href="{% url 'dashboard' %}" class="navButton"><i class="fa-solid fa-house"></i>Dashboard</a>
+                <a href="{% url 'courses' %}" class="navButton"><i class="fa-solid fa-book-open"></i>Courses</a>
+                <a href="#" class="navButton"><i class="fa-solid fa-money-bill"></i>Donation</a>
+                <a href="#" class="navButton"><i class="fa-solid fa-building" ></i>About us</a>
+            </div>
+                <p class="copyRight">&copy; 2023 Ashley Academy</p>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

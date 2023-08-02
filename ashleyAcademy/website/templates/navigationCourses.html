@@ -1,0 +1,74 @@
+{% extends "navigationBar.html" %}
+<!-- 
+    'mathList': mathList,
+        'physicList': physicList,
+        'chemList':chemList,
+        'testPrepList':testPrepList,
+        'artList':artList,
+        'languageList':languageList,
+        'lifeSkillsList':lifeSkillsList,
+        'economicsList':economicsList,
+        'biologyList':biologyList,
+-->
+{% block body %}
+
+<p class="titleOfPage">Courses</p>
+<div class="allCourseContainer">
+    
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Mathematics</a>
+        {% for item in mathList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Physics</a>
+        {% for item in physicList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Chemistry</a>
+        {% for item in chemList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Test Prep</a>
+        {% for item in testPrepList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Art</a>
+        {% for item in artList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Language</a>
+        {% for item in languageList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Life Skills</a>
+        {% for item in lifeSkillsList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Economics</a>
+        {% for item in economicsList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+    <div class="coursesContent">
+        <a href="#" class="fullSubjectDisplay">Biology</a>
+        {% for item in biologyList %}
+            <a href="{% url 'disCourses' tag_text=item %}" class="specificCourses">{{ item }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

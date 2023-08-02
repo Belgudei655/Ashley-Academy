@@ -1,0 +1,176 @@
+.body{
+    position: relative;
+    background-color: #d7d7d7;
+    width:100vh;
+    height: 100vh;
+}
+
+.navBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #202020;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navButton {
+    width: 180px;
+    display: inline-block;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    padding: 5px 10px;
+    color: white;
+    font-family: Arial;
+    display: flex;
+    display: flex;
+    align-items: center;
+    
+}
+
+.navButton:hover {
+    background-color: #999;
+}
+
+.copyRight{
+    margin: 0;
+    position: absolute;
+    bottom: 45px;
+    color:grey;
+    font-size: small;
+    
+}
+.fa-solid{
+    padding-right: 10px;
+    color: #9c9fa0;
+}
+
+.logo{
+    width: 200px;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.allCourseContainer {
+    position: absolute;
+    top: 40px;
+    left: 250px;
+    width: 1260px;
+    height: 725px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 210px);
+    grid-gap: 10px;
+    align-items: flex-start;    
+}
+
+.coursesContent{
+    width:200px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height:max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.specificCourses{
+    color:black;
+    text-decoration: none;
+    font-family: Arial;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.specificCourses:hover{
+    background-color: white;
+    color:#999;
+}
+
+.fullSubjectDisplay{
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom:5px;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.titleOfPage{
+    position: relative;
+    left: 260px;
+    color:black;
+    font-family: Arial;
+    font-weight: bold;  
+    font-size: 30px;
+}
+
+.subjectContainer{
+    position: relative;
+    left: 250px;
+    width: 1260px;
+    height: 725px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleOfSubject{
+    position: relative;
+    color:black;
+    font-family: Arial;
+    font-weight: bold;  
+    font-size: 30px;
+}
+
+.unitDisplay{
+    margin-right:10px;
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+    height:max-content;
+    width: max-content;
+    padding:20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.unitDisplay:hover{
+    background-color: #9c9fa0;
+}
+
+.unitTitle{
+    color:black;
+    font-family: Arial;
+    font-weight: bold;
+    height:max-content;
+    width: max-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.lectureVideo{
+    width:1000px;
+    height:700px;
+    border-radius: 10px;
+}
+.lectureVideoContainer{
+    border-radius: 10px;
+    height: max-content;
+    width: max-content;
+    padding: 10px;
+    background-color: white;
+}
