@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Course, Subject, Lesson
 
-mathList = ['Algebra','Geometry','Trigonometry','Number Theory']
+mathList = ['Algebra','Geometry','Trigonometry','Number Theory','Adding','Subtracting','Division','Factoring','Non Number']
 physicList = ['Classical Physics','Quantum Physics','Electro Magnetism','Thermodynamics']
 chemList =['Organic Chemistry', 'Inorganic Chemistry', 'Experimental Chemistry']
 testPrepList =['GAT','SAT','IELTS','JLPT']
