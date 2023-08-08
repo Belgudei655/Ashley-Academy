@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Course, Subject, Lesson
+from .models import Course, Subject, Lesson,Test
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
@@ -14,3 +14,8 @@ class SubjectAdmin(admin.ModelAdmin):
 class LessonAdmin(admin.ModelAdmin):
     list_display = ('title', 'subject', 'yt_link')
     list_filter = ('subject__course', 'subject')
+
+@admin.register(Test)
+class TestAdmin(admin.ModelAdmin):
+    list_display = ('test_question','answer1','answer2','answer3','answer4','correct_answer')
+    list_filter = ('lesson',)

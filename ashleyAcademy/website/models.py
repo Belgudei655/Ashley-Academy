@@ -19,6 +19,12 @@ class Lesson(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     yt_link = models.URLField()
+
+    def __str__(self):
+        return f"{self.subject} - {self.title}"
+
+class Test(models.Model):
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     test_question = models.TextField()
     answer1 = models.CharField(max_length=100)
     answer2 = models.CharField(max_length=100)
@@ -27,6 +33,4 @@ class Lesson(models.Model):
     correct_answer = models.CharField(max_length=1)
 
     def __str__(self):
-        return f"{self.subject} - {self.title}"
-
-
+        return f"{self.lesson} - {self.test_question}"
