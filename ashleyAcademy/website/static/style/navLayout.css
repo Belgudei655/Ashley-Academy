@@ -58,14 +58,14 @@
     margin-bottom: 50px;
 }
 
-.allCourseContainer {
+.everythingContainer {
     position: absolute;
     top: 50px;
     left: 250px;
     width: 1220px;
     columns: 6;
     column-gap: 10px;
-    max-height: 100vh;
+    
 }
 
 .coursesContent{

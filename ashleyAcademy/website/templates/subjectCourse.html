@@ -5,8 +5,8 @@
         <p class="titleOfSubject">{{ courseTitle }}</p>
         <div class="unitContainer">
             <form method="get" action="">
-                {% csrf_token %}
-                {% for item in trigSubList %}
+                
+                {% for item in SubList %}
                 <button class="unitDisplay" type="submit" name="button_text" value="{{ forloop.counter }}">
                     Unit{{ forloop.counter }}
                 </button>
@@ -18,7 +18,7 @@
             Unit{{unitNumber}}: {{ subTitle }}
         </p>
         <div class="lectureVideoContainer">
-            <iframe class="lectureVideo" src="https://www.youtube.com/embed/ZsPyhyo16pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="lectureVideo" src="{{ yt_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         
     </div>

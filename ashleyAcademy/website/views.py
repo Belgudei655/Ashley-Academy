@@ -8,50 +8,40 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view
 import json
 
-mathList = ['Algebra','Geometry','Trigonometry','Number Theory','Adding','Subtracting','Division','Factoring','Non Number']
-physicList = ['Classical Physics','Quantum Physics','Electro Magnetism','Thermodynamics']
-chemList =['Organic Chemistry', 'Inorganic Chemistry', 'Experimental Chemistry']
-testPrepList =['GAT','SAT','IELTS','JLPT']
-artList =['Modern Art','Fancy Art','Old Art','Unique Art']
-languageList =['Japanese','English','German','Spanish']
-lifeSkillsList =['How to buy house','How to buy car','How to buy bank','How to change citizenship']
-economicsList =['Macro Economics', 'Micro Economics', 'How money works', 'Y do u need money']
-biologyList =['Cell','Gene','Telomere','DNA']
-
-trigSubList = ['Unit circle', 'Trigonometric equation', 'Trigonometric inequalities']
-
 def navigation(request):
     return render(request, "navigationBar.html")
 
 def courses(request):
-    return render(request, "navigationCourses.html", {
-        'mathList': mathList,
-        'physicList': physicList,
-        'chemList':chemList,
-        'testPrepList':testPrepList,
-        'artList':artList,
-        'languageList':languageList,
-        'lifeSkillsList':lifeSkillsList,
-        'economicsList':economicsList,
-        'biologyList':biologyList,
-    })
+    return render(request, "navigationCourses.html")
 
 def dashboard(request):
     return render(request, "dashboard.html")
 
 def disCourses(request, tag_text):
     button_number = 1
-    if request.method == 'GET':
-        button_text = request.GET.get('button_text')
-        if button_text:
-            button_number = int(button_text)
-        specificListValue = trigSubList[button_number - 1]
-    return render(request, "subjectCourse.html", {
-        'courseTitle':tag_text,
-        'trigSubList':trigSubList,
-        'unitNumber':button_number,
-        'subTitle':specificListValue
-    })
+    subject = Subject.objects.get(name=tag_text)
+    lessons = Lesson.objects.filter(subject=subject)
+
+    lesson_names = [lesson.title for lesson in lessons]
+    lesson_ytlinks = [lesson.yt_link for lesson in lessons]
+    
+    if not lesson_names or not lesson_ytlinks:
+        return render(request, "noLesson.html")
+    else:
+        if request.method == 'GET':
+            button_text = request.GET.get('button_text')
+            if button_text:
+                button_number = int(button_text)
+            specificListValue = lesson_names[button_number - 1]
+            ytSpecificLink = lesson_ytlinks[button_number - 1]
+        
+        return render(request, "subjectCourse.html", {
+            'courseTitle':tag_text,
+            'SubList':lesson_names,
+            'unitNumber':button_number,
+            'subTitle':specificListValue,
+            'yt_link':ytSpecificLink,
+        })
 
 def JSON_Courses(request):
     courses = Course.objects.all()
