@@ -1,8 +1,44 @@
 {% extends "navigationBar.html" %}
+{% load static %}
 
 {% block body %}
-<p class="titleOfPage">Dashboard</p>
-<div>
+
+<div class="dashboardContainer">
+    <div class = "statContainer">
+        <p class="thingThatsaysDashboard">Dashboard</p>
+        <div class="rating">
+
+        </div>
+        <div class = "activeTasks">
+    
+        </div>
+        <div class = "notification">
+    
+        </div>
+
+        <a href="{% url 'login' %}" class="loginButton">login</a>
+         
+        <!--<img src="{% static 'image/profileLogo.png' %}" class="profileImage" alt="profileLogo">-->
+        
+        <div class = "weeklyReport">
+    
+        </div>
+        <div class = "activityReport">
+    
+        </div>
+        <div class = "myCourses">
+
+        </div>
+    </div>
+    <div class="calendarContainer">
+        <div class = "calendar">
+
+        </div>
+        <div class = "newUpdate">
+    
+        </div>
+    </div>
+    
     
 </div>
 

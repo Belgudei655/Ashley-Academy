@@ -9,4 +9,6 @@ urlpatterns = [
     path('disCourses/<str:tag_text>/', views.disCourses, name="disCourses"),
     path('test', views.renderTest, name="test"),
     path('get_json_courses/', views.JSON_Courses, name='get_json_courses'),
+    path("login", views.login, name="login"),
+    path("register", views.register, name="register")
 ]

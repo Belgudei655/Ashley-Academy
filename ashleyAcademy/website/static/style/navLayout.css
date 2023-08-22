@@ -58,7 +58,7 @@
     margin-bottom: 50px;
 }
 
-.everythingContainer {
+.allCourseContainer {
     position: absolute;
     top: 50px;
     left: 250px;
@@ -173,4 +173,141 @@
     width: max-content;
     padding: 10px;
     background-color: white;
+}
+
+.dashboardContainer{
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    width: 1240px;
+    display: flex;
+    
+}
+
+.calendarContainer{
+    display:flex;
+    flex-direction: column;
+    width:420px;
+    position:absolute;
+    height:100vh;
+}
+
+.statContainer{
+    display:flex;
+    width:820px;
+    height:100vh;
+    position:absolute;
+}
+
+.rating{
+    position:absolute;
+    top: 90px;
+    left: 0px;
+    border-radius: 10px;
+    width: 260px;
+    height: 90px;
+    background-color: white;
+}
+.activeTasks{
+    margin-left: 10px;
+    position:absolute;
+    top: 90px;
+    /* right: 157px; */
+    left: 260px;
+    border-radius: 10px;
+    width: 260px;
+    height: 90px;
+    background-color: white;
+}
+.notification{
+    background-color: black;
+    margin-left: 10px;
+    position:absolute;
+    top: 90px;
+    left: 530px;
+    border-radius: 10px;
+    width: 300px;
+    height: 90px;
+}
+
+.thingThatsaysDashboard{
+    color:black;
+    font-family: Arial;
+    font-weight: bold;  
+    font-size: 30px;
+}
+.profileImage{
+    position:absolute;
+    top:30px;
+    right:10px;
+    border-radius: 50%;
+    width:40px;
+    height:40px;
+    
+}
+.weeklyReport{
+    position: absolute;
+    top:190px;
+    width: 530px;
+    height:300px;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+}
+
+.activityReport{
+    position: absolute;
+    top:190px;
+    left: 540px;
+    width: 300px;
+    height:300px;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+}
+.myCourses{
+    position:absolute;
+    top:500px;
+    width: 840px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+}
+.calendar{
+    position: absolute;
+    left:850px;
+    top:30px;
+    height: 460px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+}
+.newUpdate{
+    position: absolute;
+    left:850px;
+    top:500px;
+    height: 220px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.loginButton {
+    position: absolute;
+    top: 30px;
+    left: 740px;
+    text-decoration: none;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+}
+
+.loginButton:hover{
+    background-color: white;
+    color:gray;
 }

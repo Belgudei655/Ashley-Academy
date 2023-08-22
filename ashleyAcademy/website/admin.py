@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Course, Subject, Lesson,Test
+from django.contrib.admin.models import LogEntry
+from .models import Course, Subject, Lesson, Test
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):

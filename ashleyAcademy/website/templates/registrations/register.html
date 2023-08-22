@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <form method="post" action="register">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username here" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email here" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password1" name="password1" placeholder="Enter your password here" required><br>
+        <label for="password">Confirm password:</label>
+        <input type="password" id="password2" name="password2" placeholder="Confirm your password" required><br>
+        <!-- Add more fields for UserProfile -->
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

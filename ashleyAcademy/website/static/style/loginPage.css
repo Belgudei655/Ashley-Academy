@@ -1,0 +1,11 @@
+.favicon-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.favicon-container img {
+    width: 16px; /* Adjust as needed */
+    height: 16px; /* Adjust as needed */
+    vertical-align: middle;
+}
